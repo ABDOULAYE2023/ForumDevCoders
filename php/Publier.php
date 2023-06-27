@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include '../includes/head.php' ?>
+<?php include 'PublierAction.php' ?>
 
 <body>
     <br><br>
     <form class=" container" method="POST">
 
-    <?php if(isset($errorMsg)){ echo '<p>' .$errorMsg. '</p>'; } ?>
+    <?php if(isset($errorMsg)){ 
+            echo '<p>'.$errorMsg.'</p>'; 
+        }elseif(isset($sucessMsg)){
+            echo '<p>'.$sucessMsg.'</p>'; 
+        }
+        
+        ?>
 
         <div class="mb-3">
             <label for="formGroupExampleInput" class="form-label">Titre de la question</label>
@@ -20,7 +27,7 @@
             <label for="formGroupExampleInput2" class="form-label">Contenu de la question</label>
             <textarea type="text" class="form-control" name="contenu"></textarea> 
         </div>
-        <button type="submit" class="btn btn-primary" name="validation">Publier le question</button>
+        <button type="submit" class="btn btn-primary" name="validation">Publier la question</button>
     </form>
 </body>
 </html>
