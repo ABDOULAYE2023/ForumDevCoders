@@ -8,19 +8,19 @@ $id = $_GET['id'];
 // Vérification de la soumission du formulaire de confirmation
 if (isset($_POST['confirm'])) {
     // Requête de suppression avec paramètre préparé pour éviter les injections SQL
-    $sql = "DELETE FROM utilisateur WHERE id = :id";
-    $stmt = $conn->prepare($sql);
+    $stmt = $pdo->prepare ("DELETE FROM utilisateur WHERE id = :id");
+    $stmt = $pdo->prepare($sql);
     $stmt->bindValue(':id', $id, PDO::PARAM_INT);
     $stmt->execute();
 
     // Redirection vers la page index.php
-     header("Location: connexion.php");
+     header("Location: admin.php");
     exit();
 }
 
 // Requête pour récupérer les informations de l'employé à supprimer
-$sql = "SELECT * FROM utilisateur WHERE id = :id";
-$stmt = $conn->prepare($sql);
+// $sql = "SELECT * FROM utilisateur WHERE id = :id";
+$stmt = $pdo->prepare("SELECT * FROM utilisateur WHERE id = :id");
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);
 $stmt->execute();
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -40,8 +40,8 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
 <body>
     <div class="form">
-        <h2>Supprimer un apprenant : <?= $row['nom'] ?></h2>
-        <p>Êtes-vous sûr de vouloir supprimer cet apprenant ?</p>
+        <h2>Supprimer un utilisateur : <?= $row['nom'] ?></h2>
+        <p>Êtes-vous sûr de vouloir supprimer cet utilisateur ?</p>
         <p>Nom: <?= $row['nom'] ?></p>
         <p>Prénom: <?= $row['prenom'] ?></p>
         <p>Date de naissance: <?= $row['date_de_naissance'] ?></p>
@@ -49,7 +49,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
         <p>mot de passe: <?= $row['mot_de_passe'] ?></p>
         <form class="oui" action="" method="POST">
             <input type="submit" value="Oui" name="confirm">
-            <!-- <a href="verifier.php">Non</a> -->
+        
         </form>
     </div>
 </body>
