@@ -1,6 +1,6 @@
 <?php
 
- @include 'connexion.php';
+//  @include 'connexion.php';
 
 if(isset($_POST['submit'])){
 
@@ -44,8 +44,8 @@ if(isset($_POST['submit'])){
    <title>création-du-compte</title>
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
-   <link rel="stylesheet" href="../formStyle.css">
+   <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="formstyle.css"> 
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -71,9 +71,10 @@ if(isset($_POST['submit'])){
       <input type="password" name="cpassword" required placeholder="confirmez votre mot de pass">
       <select name="user_type">
          <option value="admin">Administrateur</option>
+         <option value="admin">Utilisateur</option>
       </select>
       <input type="submit" name="submit" value="Enregistrer" class="form-btn">
-      <p>Si vous avez déja un compte <i class="fa-solid fa-arrow-right" style="color: #f80d0d;"></i> <a href="../index.php">Se connecter!</a></p>
+      <p>Si vous avez déja un compte <i class="fa-solid fa-arrow-right" style="color: blue;"></i> <a href="connect.php">Se connecter!</a></p>
    </form>
 
 </div>
