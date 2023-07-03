@@ -1,6 +1,6 @@
 <?php
 
-//  @include 'connexion.php';
+@include 'connexion.php';
 
 if(isset($_POST['submit'])){
 
