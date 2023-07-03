@@ -8,6 +8,7 @@
 
 body {
     font-family: Arial, sans-serif;
+    background-color: darkorange;
 }
 
 .container {
@@ -42,7 +43,7 @@ body {
     font-size: 23px;
     margin-bottom: 40px;
     color: rgb(8, 238, 39);
-    animation: textAnimation 4s infinite;
+    animation: textAnimation 4s infinite; 
 }
 
 .image-container {
