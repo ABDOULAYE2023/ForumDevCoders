@@ -36,9 +36,14 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Supprimer</title>
     <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../style/header.css"> 
+   <link rel="stylesheet" href="../style/footer.css">
 </head>
 
 <body>
+<?php
+    require_once "header.php";
+?>
     <div class="form">
         <h2>Supprimer un utilisateur : <?= $row['nom'] ?></h2>
         <p>Êtes-vous sûr de vouloir supprimer cet utilisateur ?</p>
@@ -52,6 +57,9 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
         
         </form>
     </div>
+    <?php
+    require_once "footer.php";
+    ?> 
 </body>
 
 </html>

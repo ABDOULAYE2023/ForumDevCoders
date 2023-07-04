@@ -44,15 +44,19 @@ if(isset($_POST['submit'])){
    <title>création-du-compte</title>
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="style.css"> 
-    <link rel="stylesheet" href="formstyle.css"> 
-
+    <link rel="stylesheet" href="style.css"> 
+   <link rel="stylesheet" href="formstyle.css">
+   <link rel="stylesheet" href="../style/acceuil.css"> 
+   <link rel="stylesheet" href="../style/header.css"> 
+   <link rel="stylesheet" href="../style/footer.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 </head>
 <body>
-   
+<?php
+    require_once "header.php";
+   ?>  
 <div class="form-container">
 
    <form action="" method="post">
@@ -76,8 +80,9 @@ if(isset($_POST['submit'])){
       <input type="submit" name="submit" value="Enregistrer" class="form-btn">
       <p>Si vous avez déja un compte <i class="fa-solid fa-arrow-right" style="color: blue;"></i> <a href="connect.php">Se connecter!</a></p>
    </form>
-
 </div>
-
+<?php
+    require_once "footer.php";
+    ?> 
 </body>
 </html>

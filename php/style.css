@@ -63,7 +63,7 @@
   background: #2bc48a;
 }
 
-.form-container {
+ .form-container { 
   min-height: 100vh;
   display: flex;
   align-items: center;

@@ -19,12 +19,14 @@
    <title>admin page</title>
    <!-- custom css file link  -->
    <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="">
-
-
+   <link rel="stylesheet" href="../style/header.css"> 
+   <link rel="stylesheet" href="../style/footer.css">
+   <link rel="stylesheet" href="../style/acceuil.css"> 
 </head>
 <body>
-   
+<?php
+    require_once "header.php";
+   ?>
 <div class="container">
 
    <div class="content">
@@ -41,7 +43,9 @@
    </select>
        <a href="deconnexion.php"class="btn" style="background: blue; color: white">Se deconnecter</a> 
    </div>
-
 </div>
+<?php
+    require_once "footer.php";
+    ?> 
 </body>
 </html>
